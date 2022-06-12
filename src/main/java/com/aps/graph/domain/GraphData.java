@@ -11,10 +11,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class GraphData {
         String timestamp;
-        long setMv;
-        long setOt;
-        long setCp;
-        long actualMv;
-        long actualOt;
-        long actualCp;
+        double actualMv;
+        double setMv;
+        double actualOt;
+        double setOt;
+        double actualCp;
+        double setCp;
 }

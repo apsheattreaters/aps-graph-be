@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class GraphServices {
-    private static final String FURNACE1 = "furnace1";
     private final JdbcTemplate jdbcTemplate;
 
     public List<GraphData> getData(String furnace, String fromTime, String toTime) {
@@ -24,12 +23,12 @@ public class GraphServices {
 
                 return new GraphData(
                         rs.getString(1),
-                        rs.getLong(2),
-                        rs.getLong(3),
-                        rs.getLong(4),
-                        rs.getLong(5),
-                        rs.getLong(6)
-                        ,rs.getLong(7));
+                        rs.getDouble(2),
+                        rs.getDouble(3),
+                        rs.getDouble(4),
+                        rs.getDouble(5),
+                        rs.getDouble(6),
+                        rs.getDouble(7));
             });
     }
 }
